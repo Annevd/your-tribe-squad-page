@@ -1,54 +1,90 @@
-/*styling view all page ~ Anne */
-
-header {
-    text-align: center;
-    margin: 20px;
+body {
+    background-color: #b35e5e;
 }
 
-h1 {
-    font-size: 3rem;
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
-ul {
-    text-align: center;
-    margin: 0;
-    padding: 20px;
+nav ul li {
+    float: left;
+    position: relative;
 }
 
-li{
-    list-style-type: none;
-    display: inline;
-    justify-content: space-between;
-    padding: 5px;
-    margin: 5px;
+nav ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-/*bovenstaande 4 styles header, h1 , ul en li worden nu overal zo gestyled, ook in de index.html. Deze kunnen we later nog aanpassen naar ons uiteindelijke design zodat het consistent blijft*/
-
-.viewall-container {
-    margin: 0 auto; /*Zorgt ervoor dat boven en onder geen ruimte is buiten de container, en dat de margin links en rechts automatisch verdeeld wordt en dat de container gecentreerd wordt*/
+nav ul li a:hover {
+    background: #f2f2f2;
+    color: #fb5958;
 }
 
-.viewall-spacer {
-    max-width: 1200px; /*Zorgt ervoor dat de container niet groter wordt dan 1200px, handig voor bijvoorbeeld hele grote schermen*/
-    margin: auto; /*Verdeelt automatisch the margin van de container*/
+nav ul li a:not(:only-child):after {
+    padding-left: 4px;
+    content: ' ▾';
 }
 
-.viewall-cards {
-    display: flex; /*wordt gebruikt om een ​​flexibele container te maken waarmee de onderliggende elementen in een rij of kolom kunnen worden opgemaakt*/
-    flex-wrap: wrap; /*maakt het mogelijk dat cards over meerdere regels of kolommen lopen als ze niet binnen de beschikbare ruimte in een enkele rij of kolom passen. */
-    justify-content: space-evenly; /* zorgt ervoor dat de cards even verdeeld worden*/
+nav ul li ul li {
+    min-width: 190px;
 }
 
-.viewall-col {
-    display: inline-flex; /*zorgt ervoor dat de container zich gedraagt ​​als een element op inline-niveau, maar met flexibele lay-outeigenschappen, waardoor deze inline met andere inhoud kan vloeien terwijl flexbox nog steeds wordt gebruikt voor de onderliggende elementen.*/
-    flex-direction: column; /*rangschikt de onderliggende elementen van de flexcontainer in een verticale kolomindeling, waarbij ze op elkaar worden gestapeld in plaats van op een rij.*/
-    justify-content:space-evenly; /* zorgt ervoor dat de kolommen even verdeeld worden*/
+nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
 }
 
-.viewall-profile {
-    margin: 10px auto; /*margin links en rechts van de profile cards zijn 10px en de zijkanten worden automatisch verdeeld*/
-    height: auto; /*zorgt ervoor dat de breedte/hoogte van een element zich automatisch aanpast aan de inhoud, waardoor het naar behoefte kan worden vergroot of verkleind om bij de inhoud te passen.*/
-    width: auto;
-  }
+
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    height: 70px;
+    width: 70px;
+}
+
+
+@media screen and (min-width: 800px) {
+    .nav-list {
+        display: block;
+    }
+}
+
+.navigation {
+    height: 70px;
+    background: #ffffff;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.name {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+.name a,
+.name a:visited {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}

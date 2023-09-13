@@ -11,6 +11,7 @@ In het S01W2-01-Squadpage wordt stap voor stap behandeld wat je moet doen.
 
 Bij deze leertaak hoort de deeltaak:
 - [Your Tribe - Team Canvas](https://github.com/fdnd-task/your-tribe-team-canvas/)
+- [Your Tribe - Responsive Design](https://github.com/fdnd-task/your-tribe-responsive-design/)
 
 
 

@@ -1,0 +1,54 @@
+/*styling view all page ~ Anne */
+
+header {
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+ul {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+li{
+    list-style-type: none;
+    display: inline;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+}
+
+/*bovenstaande 4 styles header, h1 , ul en li worden nu overal zo gestyled, ook in de index.html. Deze kunnen we later nog aanpassen naar ons uiteindelijke design zodat het consistent blijft*/
+
+.viewall-container {
+    margin: 0 auto; /*Zorgt ervoor dat boven en onder geen ruimte is buiten de container, en dat de margin links en rechts automatisch verdeeld wordt en dat de container gecentreerd wordt*/
+}
+
+.viewall-spacer {
+    max-width: 1200px; /*Zorgt ervoor dat de container niet groter wordt dan 1200px, handig voor bijvoorbeeld hele grote schermen*/
+    margin: auto; /*Verdeelt automatisch the margin van de container*/
+}
+
+.viewall-cards {
+    display: flex; /*wordt gebruikt om een ​​flexibele container te maken waarmee de onderliggende elementen in een rij of kolom kunnen worden opgemaakt*/
+    flex-wrap: wrap; /*maakt het mogelijk dat cards over meerdere regels of kolommen lopen als ze niet binnen de beschikbare ruimte in een enkele rij of kolom passen. */
+    justify-content: space-evenly; /* zorgt ervoor dat de cards even verdeeld worden*/
+}
+
+.viewall-col {
+    display: inline-flex; /*zorgt ervoor dat de container zich gedraagt ​​als een element op inline-niveau, maar met flexibele lay-outeigenschappen, waardoor deze inline met andere inhoud kan vloeien terwijl flexbox nog steeds wordt gebruikt voor de onderliggende elementen.*/
+    flex-direction: column; /*rangschikt de onderliggende elementen van de flexcontainer in een verticale kolomindeling, waarbij ze op elkaar worden gestapeld in plaats van op een rij.*/
+    justify-content:space-evenly; /* zorgt ervoor dat de kolommen even verdeeld worden*/
+}
+
+.viewall-profile {
+    margin: 10px auto; /*margin links en rechts van de profile cards zijn 10px en de zijkanten worden automatisch verdeeld*/
+    height: auto; /*zorgt ervoor dat de breedte/hoogte van een element zich automatisch aanpast aan de inhoud, waardoor het naar behoefte kan worden vergroot of verkleind om bij de inhoud te passen.*/
+    width: auto;
+  }

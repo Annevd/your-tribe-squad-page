@@ -1,4 +1,8 @@
 /*styling view all page ~ Anne */
+* {
+    margin: 0;
+}
+
 
 header {
     text-align: center;

@@ -1,5 +1,7 @@
 body {
     background-color: #b35e5e;
+    background-image: url("/assets/jungle-en-houten-tafel-achtergrond-gemaakt-met-generatieve-ai_218381-14196.jpg");
+    background-size: cover;
 }
 
 nav {

@@ -29,42 +29,32 @@ li {
 
 
 .viewall-container {
-    margin: 0 auto;
-}
-
-.viewall-spacer {
-    max-width: 1200px;
-    /*Zorgt ervoor dat de container niet groter wordt dan 1200px,*/
-    margin: auto;
-    /*Verdeelt automatisch the margin van de container*/
-}
-
-.viewall-cards {
+    margin: 0 auto; 
     display: flex;
-    flex-wrap: wrap;
-    /*maakt het mogelijk dat cards over meerdere regels of kolommen lopen als ze niet binnen de beschikbare ruimte in een enkele rij of kolom passen. */
-    justify-content: space-evenly;
-    /* zorgt ervoor dat de cards even verdeeld worden*/
-}
+    justify-content: center;
+    align-items: flex-start;
+    /*gap: 20px; Adjust the gap between iframes as needed */
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    }
+
 
 .viewall-col {
-    display: inline-flex;
-    /*zorgt ervoor dat de container zich gedraagt ​​als een element op inline-niveau, maar met flexibele lay-outeigenschappen, waardoor deze inline met andere inhoud kan vloeien terwijl flexbox nog steeds wordt gebruikt voor de onderliggende elementen.*/
-    flex-direction: column;
-    /*rangschikt de onderliggende elementen van de flexcontainer in een verticale kolomindeling, waarbij ze op elkaar worden gestapeld in plaats van op een rij.*/
-    justify-content: space-evenly;
-    /* zorgt ervoor dat de kolommen even verdeeld worden*/
+    box-sizing: border-box;
 }
 
 .viewall-profile {
-    margin: 10px auto;
     height: 20em;
     width: 20em;
 }
 
 iframe {
-    border: 0.1em solid #3c5b6700;
     border-radius: 10%;
     height: 40em;
     width: 40em;
-}
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 50px;
+    }

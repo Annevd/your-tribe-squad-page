@@ -3,7 +3,6 @@
     margin: 0;
 }
 
-
 header {
     text-align: center;
     margin: 20px;
@@ -28,23 +27,20 @@ li {
     margin: 5px;
 }
 
-/*bovenstaande 4 styles header, h1 , ul en li worden nu overal zo gestyled, ook in de index.html. Deze kunnen we later nog aanpassen naar ons uiteindelijke design zodat het consistent blijft*/
 
 .viewall-container {
     margin: 0 auto;
-    /*Zorgt ervoor dat boven en onder geen ruimte is buiten de container, en dat de margin links en rechts automatisch verdeeld wordt en dat de container gecentreerd wordt*/
 }
 
 .viewall-spacer {
     max-width: 1200px;
-    /*Zorgt ervoor dat de container niet groter wordt dan 1200px, handig voor bijvoorbeeld hele grote schermen*/
+    /*Zorgt ervoor dat de container niet groter wordt dan 1200px,*/
     margin: auto;
     /*Verdeelt automatisch the margin van de container*/
 }
 
 .viewall-cards {
     display: flex;
-    /*wordt gebruikt om een ​​flexibele container te maken waarmee de onderliggende elementen in een rij of kolom kunnen worden opgemaakt*/
     flex-wrap: wrap;
     /*maakt het mogelijk dat cards over meerdere regels of kolommen lopen als ze niet binnen de beschikbare ruimte in een enkele rij of kolom passen. */
     justify-content: space-evenly;
@@ -62,8 +58,13 @@ li {
 
 .viewall-profile {
     margin: 10px auto;
-    /*margin links en rechts van de profile cards zijn 10px en de zijkanten worden automatisch verdeeld*/
-    height: auto;
-    /*zorgt ervoor dat de breedte/hoogte van een element zich automatisch aanpast aan de inhoud, waardoor het naar behoefte kan worden vergroot of verkleind om bij de inhoud te passen.*/
-    width: auto;
+    height: 20em;
+    width: 20em;
+}
+
+iframe {
+    border: 0.1em solid #3c5b6700;
+    border-radius: 10%;
+    height: 40em;
+    width: 40em;
 }

@@ -3,6 +3,8 @@
     margin: 0;
 }
 
+/*header*/
+
 header {
     text-align: center;
     margin: 20px;
@@ -27,6 +29,7 @@ li {
     margin: 5px;
 }
 
+/*visitekaartjes*/
 
 .viewall-container {
     margin: 0 auto; 

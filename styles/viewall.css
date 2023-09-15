@@ -37,7 +37,7 @@ li {
     justify-content: center;
     align-items: flex-start;
     /*gap: 20px; Adjust the gap between iframes as needed */
-    max-width: 1200px; /* Adjust the maximum width as needed */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     }
@@ -48,7 +48,7 @@ li {
 }
 
 .viewall-profile {
-    height: 20em;
+    height: 25em;
     width: 20em;
 }
 

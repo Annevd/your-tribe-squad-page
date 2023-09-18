@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (containerId === 'Q3') {
         container.querySelector('.q3-text').style.display = 'block';
+
+        // Translate q3 and store the translation state in sessionStorage
+        container.style.transform = 'translate(15em, 0em)';
+        sessionStorage.setItem('q3Translated', 'true');
       }
     });
 
@@ -49,5 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
         container.querySelector('.q3-text').style.display = 'none';
       }
     });
+
+    // Check if q3 is already translated and set its initial position
+    const isQ3Translated = sessionStorage.getItem('q3Translated');
+    if (container.id === 'Q3' && isQ3Translated) {
+      container.style.transform = 'translate(15em, 0em)';
+    }
   });
 });

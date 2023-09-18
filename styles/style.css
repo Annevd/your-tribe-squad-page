@@ -87,20 +87,9 @@ nav ul li ul li a {
     line-height: 70px;
     text-transform: uppercase;
     font-size: 1.4em;
-}
-
-.name a,
-.name a:visited {
     color: #ffffff;
     font-weight: bold;
-    text-decoration: none;
 }
-
-body
-    
-
-
-
 
 .top {
     padding-top: 3em;
@@ -214,68 +203,79 @@ body
 
 /*visitekaartjes view all page*/
 
-.viewall-container {
+.viewall-container { /*hierin zitten 3 sections die dienen als 3 kolommen met daarin de visitekaartjes*/
     margin: 0 auto; 
     display: flex;
     justify-content: center;
     align-items: flex-start;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
-    }
+}
 
 
-.viewall-col {
+.viewall-col { /*dit zijn de kolommen*/
     box-sizing: border-box;
 }
 
-.viewall-profile {
+
+iframe { /*dit styled de iframes*/
+    border-radius: 10%;
+    display: block;
+    margin: 50px;
     height: 25em;
     width: 20em;
+    }
+
+/*view me button & hover*/
+
+.iframe-container { /*in deze container zitten de iframes met daarbovenop een link ernaartoe*/
+    position: relative;
 }
 
-iframe {
-    border-radius: 10%;
-    height: 40em;
-    width: 40em;
-    display: block;
+.iframe-container a { /*hierin maken we de link dezelfde grootte als de container*/
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
     width: 100%;
-    border: none;
-    margin: 50px;
-    }
+    text-decoration: none;
+}
 
-    .iframe-container {
-        position: relative;
-    }
+.btn { /*hier stylen we de button van de link*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 25em;
+    width: 20em;
+    border-radius: 10%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    opacity: 0;
+}
 
-    .iframe-container a {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        text-decoration: none;
-    }
+.iframe-container a:hover .btn {
+    opacity: 0.7; /*als je over de link hovert, word de opacity van de button 0.7*/
+}
 
-    .btn {
-        background-color: rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
-        padding: 10px;
-        height: 25em;
-        width: 20em;
-        border-radius: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        letter-spacing: 2px;
-        opacity: 0;
-    }
+.iframe-container a:visited .btn {
+    text-decoration: none;
+}
 
-    .iframe-container a:hover .btn {
-        opacity: 0.7;
-    }
 
-    .iframe-container a:visited .btn {
-        text-decoration: none;
+/*media queries: hoe krijg je het gecentreerd op smal scherm?*/
+
+@media (max-width: 1250px){
+    .viewall-container {
+        flex-wrap: wrap;
+        flex-direction: row;
     }
+}
+
+@media (max-width: 880px){
+    .viewall-container{
+        flex-wrap: wrap;
+    }
+}

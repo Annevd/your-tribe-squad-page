@@ -210,3 +210,37 @@ body
     font-size: 18px; 
     margin: 0; 
 }
+
+
+/*visitekaartjes*/
+
+.viewall-container {
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*gap: 20px; Adjust the gap between iframes as needed */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+
+
+.viewall-col {
+    box-sizing: border-box;
+}
+
+.viewall-profile {
+    height: 25em;
+    width: 20em;
+}
+
+iframe {
+    border-radius: 10%;
+    height: 40em;
+    width: 40em;
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 50px;
+    }

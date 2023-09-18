@@ -4,29 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Squadpage 1D</title>
-    <link rel="stylesheet" href="styles/viewall.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
-    <header>
-
-      <nav>
-        <!--Hier komt de uiteindelijk gemaakte nav, dit is een voorbeeld-->
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="viewall.html">View all</a></li>
-        </ul>
-      </nav>
-
-      <h1>All cards</h1>
-
+    <header class="navigation">
+      <div class="nav-container">
+        <div class="name">
+          <a href="#">View All</a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="viewall.html">View all</a></li>
+            <li><a href="https://fdnd.nl/">FDND</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
 
-    <div class="viewall-container">
+    <section class="viewall-container">
 
-          <div class="viewall-col">
+          <section class="viewall-col">
             <!--Dit is één van de drie kolommen-->
 
             <iframe class="viewall-profile" src="https://annevd.github.io/your-tribe-profile-card/" frameborder="no"></iframe>
@@ -43,9 +47,9 @@
 
             <iframe class="viewall-profile" src="https://lisagjh.github.io/your-tribe-profile-card/profilecard-versie-2/versie2.html" frameborder="no"></iframe>
 
-          </div>
+          </section>
 
-          <div class="viewall-col">
+          <section class="viewall-col">
             <!--Dit is één van de drie kolommen-->
 
             <iframe class="viewall-profile" src="https://anna-kyra.github.io/your-tribe-profile-card/" frameborder="no"></iframe>
@@ -62,9 +66,9 @@
 
             <iframe class="viewall-profile" src="https://yujing-student.github.io/your-tribe-profile-card/" frameborder="no"></iframe>
 
-          </div>
+          </section>
 
-          <div class="viewall-col">
+          <section class="viewall-col">
             <!--Dit is één van de drie kolommen-->
             
             <iframe class="viewall-profile" src="http://zainablfz.github.io/your-tribe-profile-card/" frameborder="no"></iframe>
@@ -79,8 +83,10 @@
 
             <iframe class="viewall-profile" src="https://tomdeeterink1.github.io/your-tribe-profile-card/" frameborder="no"></iframe>
 
-          </div>
-        </div>
+            <iframe class="viewall-profile" src="https://bibekma.github.io/your-tribe-profile-card/visitekaartje2/" frameborder="no"></iframe>
+
+          </section>
+        </section>
   </main>
   
   </body>

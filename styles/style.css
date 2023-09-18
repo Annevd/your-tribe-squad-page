@@ -219,7 +219,6 @@ body
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /*gap: 20px; Adjust the gap between iframes as needed */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -243,4 +242,39 @@ iframe {
     width: 100%;
     border: none;
     margin: 50px;
+    }
+
+    .iframe-container {
+        position: relative;
+    }
+
+    .iframe-container a {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        text-decoration: none;
+    }
+
+    .btn {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        height: 25em;
+        width: 20em;
+        border-radius: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+
+    .iframe-container a:hover .btn {
+        opacity: 0.7;
+    }
+
+    .iframe-container a:visited .btn {
+        text-decoration: none;
     }

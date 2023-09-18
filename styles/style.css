@@ -3,8 +3,8 @@
 }
 
 body {
-    background-color: #b35e5e;
-    background-image: url("/assets/jungle-en-houten-tafel-achtergrond-gemaakt-met-generatieve-ai_218381-14196.jpg");
+    /* background-color: #ed52d6; */
+    background-image: url("../assets/houten-natuurlijke-vloer-decoratie-concept.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -34,7 +34,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #f2f2f2;
+    background: #060606;
     color: #fb5958;
 }
 
@@ -52,7 +52,6 @@ nav ul li ul li a {
     line-height: 20px;
 }
 
-
 .nav-mobile {
     display: none;
     position: absolute;
@@ -63,7 +62,6 @@ nav ul li ul li a {
     width: 70px;
 }
 
-
 @media screen and (min-width: 800px) {
     .nav-list {
         display: block;
@@ -72,7 +70,7 @@ nav ul li ul li a {
 
 .navigation {
     height: 70px;
-    background: #ffffff;
+    background: #060505c2;
 }
 
 .nav-container {
@@ -87,54 +85,20 @@ nav ul li ul li a {
     line-height: 70px;
     text-transform: uppercase;
     font-size: 1.4em;
-}
-
-.name a,
-.name a:visited {
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
-    text-decoration: none;
 }
 
-body
-    
-
-
-
-
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-
-.curved-text {
-    translate: 0em -1em;
-    font-size: 4em; 
-    letter-spacing: 0.1em;
-    text-align: center;
-    transform: perspective(400px) rotateX(30deg); 
-}
-
-.image-containers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
+/* Styles for image containers */
 .image-container {
-    width: 11em; 
-    height: 17em; 
-    background-color: #caa7dd; 
-    margin: 1em; 
+    width: 11em;
+    height: 17em;
+    background-color: #caa7dd;
+    margin: 1em;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative; /* Changed from absolute */
     border-radius: 10%;
     transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out;
@@ -143,65 +107,44 @@ body
 
 
 
-.image-container#Q2 {
-    rotate: -15deg;
-}
-
-.image-container#Q3 {
-    rotate: 15deg;
-}
-
-
-
 .image-container img {
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
 }
 
-
-.q1-text {
-    display: none; 
-    color: #000; 
-    background-color: #ffffff00; 
-    padding: 10px; 
-    position: absolute; 
-    top: 0; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    text-align: left; 
-    width: 80%; 
+/* Centering image containers */
+.image-containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Added min-height to ensure containers are centered vertically */
 }
 
-.q1-text h2 {
-    font-size: 24px; 
-    margin-bottom: 10px; 
+/* Additional styles for text inside image containers */
+.q-text,
+.q3-text {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0); /* Changed from #ffffff00 */
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
 }
 
-.q1-text p {
-    font-size: 18px; 
-    margin: 0; 
+.q-text h2,
+.q3-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-
-.q2-text {
-    display: none; 
-    color: #000; 
-    background-color: #ffffff00; 
-    padding: 10px; 
-    position: absolute; 
-    top: 0; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    text-align: left; 
-    width: 80%; 
+.q-text p,
+.q3-text p {
+    font-size: 18px;
+    margin: 0;
 }
-
-.q2-text h2 {
-    font-size: 24px; 
-    margin-bottom: 10px; 
-}
-
-.q2-text p {
-    font-size: 18px; 
-    margin: 0; 
+.image-container.moved {
+    transform: translateX(12em); /* Adjust 12em as needed */
 }

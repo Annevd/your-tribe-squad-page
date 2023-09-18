@@ -1,75 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const imageContainers = document.querySelectorAll('.image-container');
-    let containerId = null;
-    const overlay = document.getElementById('overlay');
+  const imageContainers = document.querySelectorAll('.image-container');
+  let containerId = null;
+  const overlay = document.getElementById('overlay');
 
-
-    function removeFadeInClass() {
-        imageContainers.forEach(container => {
-            container.classList.remove('fade-in');
-        });
-    }
-
-    setTimeout(removeFadeInClass, 1000);
-
+  function removeFlipClass() {
     imageContainers.forEach(container => {
-        container.addEventListener('click', () => {
-            overlay.style.zIndex = '5';
-
-            containerId = container.id;
-
-            switch (containerId) {
-                
-                case 'Q2':
-                    container.style.transform = 'rotate(15deg) scale(1.85) translate(0%, -10%)';
-                    break;
-                case 'Q3':
-                    container.style.transform = 'rotate(-15deg) scale(1.85) translate(0%, -10%)';
-                    break;
-                
-                default:
-                    break;
-            }
-
-
-            container.querySelector('img').style.opacity = '0';
-
-            container.style.zIndex = '10';
-
-            
-
-            if (containerId === 'Q2') {
-                container.querySelector('.q2-text').style.display = 'block';
-            }
-
-            if (containerId === 'Q3') {
-                container.querySelector('.q3-text').style.display = 'block';
-            }
-
-            
-        });
-
-        container.addEventListener('mouseout', () => {
-            overlay.style.zIndex = '-1';
-
-            container.querySelector('img').style.opacity = '1';
-
-            container.style.transform = 'none';
-
-            container.style.zIndex = '1';
-
-            
-
-            if (containerId === 'Q2') {
-                container.querySelector('.q2-text').style.display = 'none';
-            }
-
-            if (containerId === 'Q3') {
-                container.querySelector('.q3-text').style.display = 'none';
-            }
-
-            
-        });
+      container.classList.remove('flip');
     });
-});
+  }
 
+  function toggleFlip(container) {
+    container.classList.toggle('flip');
+  }
+
+  imageContainers.forEach(container => {
+    container.addEventListener('click', () => {
+      overlay.style.zIndex = '5';
+      containerId = container.id;
+
+      // Remove the flip class from all other containers
+      removeFlipClass();
+
+      // Toggle the flip class on the clicked container
+      toggleFlip(container);
+
+      container.querySelector('img').style.opacity = '0';
+      container.style.zIndex = '10';
+
+      if (containerId === 'Q2') {
+        container.querySelector('.q2-text').style.display = 'block';
+      }
+
+      if (containerId === 'Q3') {
+        container.querySelector('.q3-text').style.display = 'block';
+      }
+    });
+
+    container.addEventListener('mouseout', () => {
+      overlay.style.zIndex = '-1';
+      container.querySelector('img').style.opacity = '1';
+      container.style.zIndex = '1';
+
+      if (containerId === 'Q2') {
+        container.querySelector('.q2-text').style.display = 'none';
+      }
+
+      if (containerId === 'Q3') {
+        container.querySelector('.q3-text').style.display = 'none';
+      }
+    });
+  });
+});

@@ -3,8 +3,8 @@
 }
 
 body {
-    background-color: #b35e5e;
-    background-image: url("/assets/jungle-en-houten-tafel-achtergrond-gemaakt-met-generatieve-ai_218381-14196.jpg");
+    background-color: #ed52d6;
+    background-image: url("../assets/houten-natuurlijke-vloer-decoratie-concept.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -34,7 +34,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #f2f2f2;
+    background: #060606;
     color: #fb5958;
 }
 
@@ -72,7 +72,7 @@ nav ul li ul li a {
 
 .navigation {
     height: 70px;
-    background: #ffffff;
+    background: #060505c2;
 }
 
 .nav-container {
@@ -91,7 +91,7 @@ nav ul li ul li a {
 
 .name a,
 .name a:visited {
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
     text-decoration: none;
 }

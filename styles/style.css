@@ -1,9 +1,9 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
-    /* background-color: #ed52d6; */
     background-image: url("../assets/houten-natuurlijke-vloer-decoratie-concept.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -43,6 +43,8 @@ nav ul li a:not(:only-child):after {
     content: ' ▾';
 }
 
+/* Deze doen niks?
+
 nav ul li ul li {
     min-width: 190px;
 }
@@ -50,9 +52,9 @@ nav ul li ul li {
 nav ul li ul li a {
     padding: 15px;
     line-height: 20px;
-}
+}*/
 
-.nav-mobile {
+.nav-mobile { /* Wat doet dit?*/
     display: none;
     position: absolute;
     top: 0;
@@ -68,7 +70,7 @@ nav ul li ul li a {
     }
 }
 
-.navigation {
+header {
     height: 70px;
     background: #060505c2;
 }
@@ -226,14 +228,14 @@ iframe { /*dit styled de iframes*/
 
 /*media queries: hoe krijg je het gecentreerd op smal scherm?*/
 
-@media (max-width: 1250px){
+@media (max-width: 1250px){ /*dit zegt eigenlijk, tótdat het scherm 1250px breed is, wil ik dat er maar 2 kaartjes naast elkaar staan*/
     .viewall-container {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /*zorgt ervoor dat de visitekaartjes onder elkaar komen als het scherm kleiner wordt in plaats van dat ze afgesneden worden*/
         flex-direction: row;
     }
 }
 
-@media (max-width: 880px){
+@media (max-width: 880px){ /*dit zegt eigenlijk, tótdat het scherm 880px breed is, wil ik dat er maar 1 kaartje staat*/
     .viewall-container{
         flex-wrap: wrap;
     }

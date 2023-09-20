@@ -9,7 +9,7 @@ body {
     background-image: url("../assets/houten-natuurlijke-vloer-decoratie-concept.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    font-family:"quicksand";
+    font-family:"quicksand"; /*verandert het font voor álle tekst die in de body voorkomt*/
 }
 
 header {

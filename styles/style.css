@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,12 @@ body {
     background-image: url("../assets/houten-natuurlijke-vloer-decoratie-concept.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    font-family:"quicksand";
+}
+
+header {
+    height: 70px;
+    background: #060505c2;
 }
 
 nav ul {
@@ -39,32 +47,6 @@ nav ul li a:not(:only-child):after {
     content: ' ▾';
 }
 
-/* Deze doen niks?
-
-nav ul li ul li {
-    min-width: 190px;
-}
-
-nav ul li ul li a {
-    padding: 15px;
-    line-height: 20px;
-}*/
-
-.nav-mobile { /* Wat doet dit?*/
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #fff;
-    height: 70px;
-    width: 70px;
-}
-
-header {
-    height: 70px;
-    background: #060505c2;
-}
-
 .nav-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -72,16 +54,7 @@ header {
     justify-content: space-between;
 }
 
-.name {
-    padding-left: 20px;
-    line-height: 70px;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.name-homepage {
+.name , .name-homepage {
     padding-left: 20px;
     line-height: 70px;
     text-transform: uppercase;
@@ -108,7 +81,6 @@ header {
 #Q3 {
     translate: -15em 0em;
     background-color: white;
-
 }
 
 
@@ -119,7 +91,6 @@ header {
     align-items: center;
     justify-content: center;
     margin-left: 1.75em;
-
 }
 
 /* Centering image containers */
@@ -232,21 +203,21 @@ iframe { /*dit styled de iframes*/
     }
 }
 
-@media (max-width: 600px){ /**/
+@media (max-width: 600px){ /*totdat het scherm 600px breed is, haal de margin aan de rechter en linkerkant weg*/
    
     iframe {
         margin: 50px 0;
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px){/*totdat het scherm 400px breed is, maak de tekst van .name kleiner en geeft het links een padding*/
     .name{
         font-size: 1em;
        padding-left: 15px;
     }
 }
 
-@media (max-width: 450px){
+@media (max-width: 450px){/*totdat het scherm 450px breed is, maak de tekst van de tekst van .name-homepage  en a kleiner*/
     .name-homepage{
         font-size: 0.8em;
     }

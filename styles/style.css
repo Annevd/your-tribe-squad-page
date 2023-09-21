@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 body {
     background-image: url("../assets/houten-natuurlijke-vloer-decoratie-concept.jpg");
     background-size: cover;
@@ -12,10 +13,12 @@ body {
     font-family:"quicksand"; /*verandert het font voor álle tekst die in de body voorkomt*/
 }
 
+
 header {
     height: 70px;
     background: #060505c2;
 }
+
 
 nav ul {
     list-style: none;
@@ -23,10 +26,12 @@ nav ul {
     padding: 0;
 }
 
+
 nav ul li {
     float: left;
     position: relative;
 }
+
 
 nav ul li a {
     display: block;
@@ -37,15 +42,18 @@ nav ul li a {
     text-decoration: none;
 }
 
+
 nav ul li a:hover {
     background: #060606;
     color: #fb5958;
 }
 
+
 nav ul li a:not(:only-child):after {
     padding-left: 4px;
     content: ' ▾';
 }
+
 
 .nav-container {
     max-width: 1000px;
@@ -53,6 +61,7 @@ nav ul li a:not(:only-child):after {
     display: flex;
     justify-content: space-between;
 }
+
 
 .name , .name-homepage {
     padding-left: 20px;
@@ -62,6 +71,7 @@ nav ul li a:not(:only-child):after {
     color: #ffffff;
     font-weight: bold;
 }
+
 
 .image-container {
     width: 11em;
@@ -79,17 +89,22 @@ nav ul li a:not(:only-child):after {
     margin-left: 7.5em;
 }
 
+
 #Q3, #Q2, #Q1, #Q4, #Q5, #Q6 {
     translate: -15em 0em;
     background-color: white;
 }
+
 
 #Q2 {
 position:absolute;
 translate: 15em, 15em;
 }
 
+
 /* Centering image containers */
+
+
 .image-containers {
     display: flex;
     justify-content: center;
@@ -98,7 +113,10 @@ translate: 15em, 15em;
     position:absolute;
 }
 
+
 /* Additional styles for text inside image containers */
+
+
 .q-text,
 .q3-text {
     color: #000;
@@ -113,22 +131,72 @@ translate: 15em, 15em;
     z-index: -1;
 }
 
+
 .q-text h2,
 .q3-text h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
+
 .q-text p,
 .q3-text p {
     font-size: 18px;
     margin: 0;
 }
+
+
 .image-container.moved {
     transform: translateX(12em); /* Adjust 12em as needed */
 }
 
+
+/* go-back button*/
+
+
+.go-back-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #000;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.go-back-button {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    position: absolute;
+    right: 20px; /* Adjust the right distance as needed */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  
+.go-back-button:hover {
+    text-decoration: underline;
+}
+
+
+.image-container {
+ 
+    transform: translate(0, 0); /* Ensure that the rectangles start stacked */
+}
+
+
 /*visitekaartjes view all page*/
+
 
 .viewall-container { /*hierin zitten 3 sections die dienen als 3 kolommen met daarin de visitekaartjes*/
     margin: 0 auto; 
@@ -153,11 +221,14 @@ iframe { /*dit styled de iframes*/
     width: 20em;
     }
 
+
 /*view me button & hover*/
+
 
 .iframe-container { /*in deze container zitten de iframes met daarbovenop een link ernaartoe*/
     position: relative;
 }
+
 
 .iframe-container a { /*hierin maken we de link dezelfde grootte als de container*/
     position: absolute;
@@ -168,6 +239,7 @@ iframe { /*dit styled de iframes*/
     width: 100%;
     text-decoration: none;
 }
+
 
 .btn { /*hier stylen we de button van de link*/
     display: flex;
@@ -183,22 +255,27 @@ iframe { /*dit styled de iframes*/
     opacity: 0;
 }
 
+
 .iframe-container a:hover .btn {
     opacity: 0.7; /*als je over de link hovert, word de opacity van de button 0.7*/
 }
+
 
 .iframe-container a:visited .btn {
     text-decoration: none;
 }
 
 
-/*media queries + uitleg:*/
+/*media queries + uitleg:
+Deze moeten altijd onderaan staan*/
+
 
 @media (max-width: 1250px){ /*dit zegt eigenlijk, tótdat het scherm 1250px breed is, wil ik dat er maar 2 kaartjes naast elkaar staan*/
     .viewall-container {
         flex-wrap: wrap; /*zorgt ervoor dat de visitekaartjes onder elkaar komen als het scherm kleiner wordt in plaats van dat ze afgesneden worden*/
     }
 }
+
 
 @media (max-width: 600px){ /*totdat het scherm 600px breed is, haal de margin aan de rechter en linkerkant weg*/
    
@@ -207,12 +284,14 @@ iframe { /*dit styled de iframes*/
     }
 }
 
+
 @media (max-width: 400px){/*totdat het scherm 400px breed is, maak de tekst van .name kleiner en geeft het links een padding*/
     .name{
         font-size: 1em;
        padding-left: 15px;
     }
 }
+
 
 @media (max-width: 450px){/*totdat het scherm 450px breed is, maak de tekst van de tekst van .name-homepage  en a kleiner*/
     .name-homepage{
@@ -225,6 +304,7 @@ iframe { /*dit styled de iframes*/
     }
 }
 
+
 @media (max-width: 370px){ /*totdat het scherm 370px is word de tekst in de nav kleiner ennde iframes worden ook smaller*/
     nav ul li a {
         padding: 0 10px;
@@ -234,46 +314,4 @@ iframe { /*dit styled de iframes*/
     iframe {
         width: 15em;
     }
-}
-
-.go-back-button {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5em;
-    color: #000;
-    padding: 0;
-    display: flex;
-    align-items: center;
-
-}
-
-
-
-.go-back-button {
-    background-color: white;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    width: 40px; /* Adjust the width as needed */
-    height: 40px; /* Adjust the height as needed */
-    position: absolute;
-    right: 20px; /* Adjust the right distance as needed */
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  
-  
-
-.go-back-button:hover {
-    text-decoration: underline;
-}
-
-.image-container {
- 
-    transform: translate(0, 0); /* Ensure that the rectangles start stacked */
 }

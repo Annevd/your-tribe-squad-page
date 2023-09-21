@@ -76,21 +76,17 @@ nav ul li a:not(:only-child):after {
     transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out;
     transform-origin: center center;
+    margin-left: 7.5em;
 }
 
-#Q3 {
+#Q3, #Q2, #Q1, #Q4, #Q5, #Q6 {
     translate: -15em 0em;
     background-color: white;
 }
 
-
-.image-container img {
-    max-width: 200%;
-    max-height: 200%;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1.75em;
+#Q2 {
+position:absolute;
+translate: 15em, 15em;
 }
 
 /* Centering image containers */
@@ -99,6 +95,7 @@ nav ul li a:not(:only-child):after {
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Added min-height to ensure containers are centered vertically */
+    position:absolute;
 }
 
 /* Additional styles for text inside image containers */
@@ -228,7 +225,16 @@ iframe { /*dit styled de iframes*/
     }
 }
 
-<<<<<<< HEAD
+@media (max-width: 370px){ /*totdat het scherm 370px is word de tekst in de nav kleiner ennde iframes worden ook smaller*/
+    nav ul li a {
+        padding: 0 10px;
+        font-size: 0.6em;
+    }
+
+    iframe {
+        width: 15em;
+    }
+}
 
 .go-back-button {
     position: absolute;
@@ -271,15 +277,3 @@ iframe { /*dit styled de iframes*/
  
     transform: translate(0, 0); /* Ensure that the rectangles start stacked */
 }
-=======
-@media (max-width: 370px){ /*totdat het scherm 370px is word de tekst in de nav kleiner ennde iframes worden ook smaller*/
-    nav ul li a {
-        padding: 0 10px;
-        font-size: 0.6em;
-    }
-
-    iframe {
-        width: 15em;
-    }
-}
->>>>>>> 692a2ab10cdc636418dc37d270dd9f7e5d7cdb0e

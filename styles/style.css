@@ -227,3 +227,14 @@ iframe { /*dit styled de iframes*/
         font-size: 0.9em;
     }
 }
+
+@media (max-width: 370px){ /*totdat het scherm 370px is word de tekst in de nav kleiner ennde iframes worden ook smaller*/
+    nav ul li a {
+        padding: 0 10px;
+        font-size: 0.6em;
+    }
+
+    iframe {
+        width: 15em;
+    }
+}

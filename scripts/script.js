@@ -67,3 +67,23 @@ document.addEventListener('DOMContentLoaded', function () {
     sessionStorage.removeItem('q3Translated');
   });
 });
+
+const mijnDiv= document.getElementById('Q2');
+
+// Maak een <a> element aan
+const link = document.createElement('a');
+link.href = 'https://rileyesther.github.io/your-tribe-profile-card/'; // Voeg de URL toe
+
+// Voeg de tekst en de link toe aan het <a> element
+link.appendChild(document.createTextNode('YUH'));
+
+// Voeg het <a> element toe aan het gewenste HTML-element
+mijnDiv.appendChild(link);
+
+// Voeg eventueel JavaScript-handlers toe voor linkgedrag (bijv. click event)
+link.addEventListener('click', function(event) {
+  // Voeg hier je gewenste gedrag toe, bijv. navigeren naar de link
+  // event.preventDefault(); // Dit voorkomt standaardgedrag van de link
+  // window.location.href = link.href; // Navigeer naar de link
+});
+

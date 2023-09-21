@@ -1,89 +1,88 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const imageContainers = document.querySelectorAll('.image-container');
-  let containerId = null;
-  const overlay = document.getElementById('overlay');
-  const goBackButton = document.querySelector('.go-back-button'); // Select the "Go Back" button
+const imageContainer = document.querySelectorAll('.image-container');
 
-  function removeFlipClass() {
-    imageContainers.forEach(container => {
-      container.classList.remove('flip');
-    });
-  }
+imageContainer.forEach(function(image){
+  image.addEventListener("click", function(){
+    // if(image.id === "Q3"){
+      image.style.transform = "translate(15em, 0)";
+    // }    
+  })
 
-  function toggleFlip(container) {
-    container.classList.toggle('flip');
-  }
+  console.log(image.id)
+  
+})
 
-  imageContainers.forEach(container => {
-    container.addEventListener('click', () => {
-      overlay.style.zIndex = '5';
-      containerId = container.id;
+// document.addEventListener('DOMContentLoaded', function () {
+//   const imageContainers = document.querySelectorAll('.image-container');
+//   let containerId = null;
+//   const overlay = document.getElementById('overlay');
+//   const goBackButton = document.querySelector('.go-back-button'); // Select the "Go Back" button
 
-      // Remove the flip class from all other containers
-      removeFlipClass();
+//   function removeFlipClass() {
+//     imageContainers.forEach(container => {
+//       container.classList.remove('flip');
+//     });
+//   }
 
-      // Toggle the flip class on the clicked container
-      toggleFlip(container);
+//   function toggleFlip(container) {
+//     container.classList.toggle('flip');
+//   }
 
-      container.querySelector('img').style.opacity = '0';
-      container.style.zIndex = '10';
+//   imageContainers.forEach(container => {
+//     container.addEventListener('click', () => {
+//       console.log(container)
+//       container.preventDefault();
+//       overlay.style.zIndex = '5';
+//       containerId = container.id;
 
-      if (containerId === 'Q2') {
-        container.querySelector('.q2-text').style.display = 'block';
-      }
+//       // Remove the flip class from all other containers
+//       removeFlipClass();
 
-      if (containerId === 'Q3') {
-        container.querySelector('.q3-text').style.display = 'block';
-        // Translate q3 and store the translation state in sessionStorage
-        container.style.transform = 'translate(15em, 0em)';
-        sessionStorage.setItem('q3Translated', 'true');
-      }
-    });
+//       // Toggle the flip class on the clicked container
+//       toggleFlip(container);
 
-    container.addEventListener('mouseout', () => {
-      overlay.style.zIndex = '-1';
-      container.querySelector('img').style.opacity = '1';
-      container.style.zIndex = '1';
+//       container.querySelector('img').style.opacity = '0';
+//       container.style.zIndex = '10';
 
-      if (containerId === 'Q2') {
-        container.querySelector('.q2-text').style.display = 'none';
-      }
+//       if (containerId === 'Q2') {
+//         container.querySelector('.q2-text').style.display = 'block';
+//       }
 
-      if (containerId === 'Q3') {
-        container.querySelector('.q3-text').style.display = 'none';
-      }
-    });
-  });
+//       if (containerId === 'Q3') {
+//         container.querySelector('.q3-text').style.display = 'block';
+//         // Translate q3 and store the translation state in sessionStorage
+//         container.style.transform = 'translate(15em, 0em)';
+//         sessionStorage.setItem('q3Translated', 'true');
+//       }
+//     });
 
-  // Add a click event listener to the "Go Back" button
-  goBackButton.addEventListener('click', () => {
-    // Reset the clicked container's position to its original stacked position
-    imageContainers.forEach(container => {
-      if (container.classList.contains('flip')) {
-        container.style.transform = 'translate(0, 0)';
-      }
-    });
-    // Remove the stored translation state
-    sessionStorage.removeItem('q3Translated');
-  });
-});
+//     container.addEventListener('mouseout', () => {
+//       overlay.style.zIndex = '-1';
+//       container.querySelector('img').style.opacity = '1';
+//       container.style.zIndex = '1';
 
-const mijnDiv= document.getElementById('Q2');
+//       if (containerId === 'Q2') {
+//         container.querySelector('.q2-text').style.display = 'none';
+//       }
 
-// Maak een <a> element aan
-const link = document.createElement('a');
-link.href = 'https://rileyesther.github.io/your-tribe-profile-card/'; // Voeg de URL toe
+//       if (containerId === 'Q3') {
+//         container.querySelector('.q3-text').style.display = 'none';
+//       }
+//     });
+//   });
 
-// Voeg de tekst en de link toe aan het <a> element
-link.appendChild(document.createTextNode('YUH'));
+//   // Add a click event listener to the "Go Back" button
+//   goBackButton.addEventListener('click', () => {
+//     // Reset the clicked container's position to its original stacked position
+//     imageContainers.forEach(container => {
+//       if (container.classList.contains('flip')) {
+//         container.style.transform = 'translate(0, 0)';
+//       }
+//     });
+//     // Remove the stored translation state
+//     sessionStorage.removeItem('q3Translated');
+//   });
+// });
 
-// Voeg het <a> element toe aan het gewenste HTML-element
-mijnDiv.appendChild(link);
 
-// Voeg eventueel JavaScript-handlers toe voor linkgedrag (bijv. click event)
-link.addEventListener('click', function(event) {
-  // Voeg hier je gewenste gedrag toe, bijv. navigeren naar de link
-  // event.preventDefault(); // Dit voorkomt standaardgedrag van de link
-  // window.location.href = link.href; // Navigeer naar de link
-});
+
 
